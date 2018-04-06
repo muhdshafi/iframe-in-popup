@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function popitup() {
+		debugger
+		//newwindow=window.open("https://www.quirksmode.org/js/popup.html",'name','height=1000,width=500');
+		newwindow=window.open("",'name','height=1000,width=1000');
+		var ifrm = newwindow.document.createElement("iframe");
+        ifrm.setAttribute("src", "https://www.quirksmode.org/js/popup.html");
+        ifrm.style.width = "100%";
+        ifrm.style.height = "100%";
+        ifrm.style.frameborder = "0";
+        newwindow.document.body.appendChild(ifrm);
+		if (window.focus) {newwindow.focus()}
+		return false;
+	}
+	</script>
+<button onclick="popitup();">Open</button>	
+</body>
+</html>
